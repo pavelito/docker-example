@@ -43,7 +43,6 @@ func saveCounter(value int) {
 	log.Println(fmt.Sprintf("Saving Counter Value - %d", value))
 	file.Seek(0, 0)
 	_, err := file.WriteAt([]byte(fmt.Sprintf("%d\n", value)), 0)
-	// _, err := file.WriteString(fmt.Sprintf("%d\n", value))
 	if err != nil {
 		log.Fatalln(err)
 	}
